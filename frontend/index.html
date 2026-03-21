@@ -654,6 +654,45 @@ for(let i = blockchainData.length - 1; i >= 0; i--)
     }
 }
 
+// 🔍 find last status of this batch
+let lastStatus = null;
+
+for(let i = blockchainData.length - 1; i >= 0; i--)
+{
+    if(blockchainData[i].batchId === batchId)
+    {
+        lastStatus = blockchainData[i].status;
+        break;
+    }
+}
+
+// 🚫 validation rules
+
+if(actor === "Distributor" && lastStatus !== "Expired")
+{
+    alert("❌ Batch must be marked Expired first by Retailer");
+    return;
+}
+
+if(actor === "Manufacturer" && lastStatus !== "Collected")
+{
+    alert("❌ Batch must be Collected by Distributor first");
+    return;
+}
+
+if(actor === "Disposal" && lastStatus !== "Verified")
+{
+    alert("❌ Batch must be Verified by Manufacturer first");
+    return;
+}
+
+// 🚫 if batch doesn't exist
+if(actor !== "Retailer" && lastStatus === null)
+{
+    alert("❌ Invalid Batch ID. Start from Retailer.");
+    return;
+}
+
 await fetch("/update",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
