@@ -57,13 +57,15 @@ This system provides:
 
 ---
 
-## 📡 API Endpoints
+## 📡 API Endpoints (Prototype)
 
 | Method | Endpoint  | Description                 |
 | ------ | --------- | --------------------------- |
 | POST   | `/update` | Add a new status update     |
 | GET    | `/chain`  | Get full blockchain data    |
 | POST   | `/reset`  | Reset blockchain (for demo) |
+
+> Note: API are implemented for core functionality and are under refinement.
 
 ---
 
