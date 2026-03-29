@@ -1,10 +1,5 @@
 # 🚀 Reverse Pharma Logistics Tracker
 
-![Status](https://img.shields.io/badge/Project-Active-brightgreen)
-![Tech](https://img.shields.io/badge/Stack-Node.js%20%7C%20Express%20%7C%20Blockchain-blue)
-
----
-
 ## 🌐 Live Demo
 
 👉 https://pharma-reverse-logistics-tracker-production.up.railway.app/
