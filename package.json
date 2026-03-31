@@ -12,7 +12,9 @@
   "dependencies": {
     "cors": "^2.8.6",
     "crypto-js": "^4.2.0",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "ipfs-http-client": "^60.0.1",
+    "web3": "^4.16.0"
   },
   "description": ""
 }
